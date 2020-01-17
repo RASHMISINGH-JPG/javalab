@@ -1,0 +1,22 @@
+import java.lang.*;
+ class Student
+ {
+   public static void main(String args[])
+     {
+	 int a=10,
+	     b=22,
+		 d=45;
+	 char c='h';
+		 
+		 System.out.print(b+"\t"+a);
+		 System.out.print(a+"\n"+b);
+		 System.out.print(b+"\b"+c);
+		 System.out.println("hello");
+		 System.out.print("\\hello\\");
+		 System.out.print("\"hello\"");
+		 System.out.print("how are you\rwhere are you");
+                 System.out.print("hello india\fhii"+a);
+
+   	}	 
+}
+ 
