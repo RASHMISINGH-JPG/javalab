@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class PrePostIncrement
+{	
+static int a,b;
+	
+public static void main(String args[])
+{
+    System.out.println("enter a and b resp.");
+    Scanner sc=new Scanner(System.in);
+    a=sc.nextInt();
+    b=sc.nextInt();
+
+    PrePostIncrement.Test1();
+    PrePostIncrement.Test2();
+}
+	public static void Test1()
+	{
+		int y=a,z=b;
+		
+ 		System.out.println("result of pre increment");
+        a=++b;
+        System.out.println("value of a="+a+" ,b="+b);
+	    a=y;
+	    b=z;
+    }
+	public static void Test2()
+	{
+		int x =a,z=b;
+	    System.out.println("result of post increment");
+        a=b++;
+        System.out.println("value of a="+a+" ,b="+b);
+	    a=x;
+	    z=b;
+	}
+}	   
+	   
