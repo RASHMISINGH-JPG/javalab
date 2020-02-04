@@ -1,0 +1,30 @@
+import java.lang.*;
+class Vol
+{
+double height;
+double width;
+double length;
+void volume()
+{
+	System.out.println(" the box volume is :"+(height*width*length));
+}
+void Vol(double height,double width,double length)
+{
+	this.height=height;
+	this.width=width;
+	this.length=length;
+}
+}
+class Demovol
+{
+public static void main(String args[])
+{
+Vol instance1=new Vol();
+Vol instance2=new Vol();
+
+instance1.Vol(12,20,35);
+instance2.Vol(15,28,45);
+instance1.volume();
+instance2.volume();
+}
+}
