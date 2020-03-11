@@ -1,0 +1,50 @@
+import java.util.Scanner;
+class Operator
+{
+static int a,b,c,d,e;
+public static void main(String args[])
+{
+	Scanner sc=new Scanner(System.in);
+ System.out.println("enter  num a");
+ a=sc.nextInt();
+ System.out.println("enter b  \n 1-right shift by 2\n 2-left shift by 2\n 3-shift right zero fill by 1\n 4-Bitwise unary not\n 5-Bitwise AND\n 6-Bitwise OR");
+  
+  
+  b=sc.nextInt();
+ 
+ switch(b)
+ {
+    case 1:System.out.println("we are doing right shift by 2");
+       c=a>>2;
+       System.out.println("ur result="+c);
+	   break;
+    case 2:System.out.println("we are doing left shift by 2");
+       c=a<<2;
+       System.out.println("ur result="+c);
+	   break;
+    case 3:System.out.println("we are doing right shift zero fill by 1");
+       c=a>>>2;
+       System.out.println("ur result="+c);
+	   break;
+	case 4:System.out.println("we are doing bitwise unary not ");
+       c=~(a);
+       System.out.println("ur result="+c);
+	   break;
+	case 5:System.out.println("we are doing bitwise AND");
+	        System.out.println("enter value for AND operation");
+			d=sc.nextInt();
+            c=a&d;
+           System.out.println("ur result="+c);
+	   break;
+	case 6:System.out.println("we are doing bitwise OR");
+	        System.out.println("enter value for OR operation");
+			e=sc.nextInt();
+            c=a|e;
+           System.out.println("ur result="+c);
+		   break;
+	   
+    default:System.out.println("ur bad!!!!!");
+ }
+
+ }
+ }
