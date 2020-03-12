@@ -1,0 +1,48 @@
+import java.lang.*;
+class Box
+{
+ double height;
+ double width;
+ double length;
+  Box(double h,double w,double l)
+   {
+    height=h;
+	width=w;
+	length=l;
+   }
+   Box(Box ob)
+   {
+     height=ob.height;
+     width=ob.width;
+     length=ob.length;	 
+   }
+   Box()
+   {
+   height=2;
+   width=2;
+   length=2;
+   }
+   double Volume()
+   {
+     return height*width*length;
+   }
+   
+}
+class Passob
+{
+  public static void main(String args[])
+  {
+    Box ob1=new Box(12,5.5,2.3);
+	Box ob2=new Box();
+	Box cloneobj=new Box(ob1);
+	double Vol;
+	Vol=ob1.Volume();
+	System.out.println("Volume is"+Vol);
+	Vol=ob2.Volume();
+	System.out.println("Volume is"+Vol);
+	
+}
+
+
+
+}
