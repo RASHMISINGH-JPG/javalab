@@ -1,0 +1,22 @@
+class Test
+{
+  void meth(int i,int j)
+  {
+   i*=2;
+   j/=2;   
+  }
+}
+class Call_by_value
+{
+  public static void main(String args[])
+  {
+   int a=50;
+   int b=30;
+   System.out.println("value of a and b before is"+a+"  "+b);
+   Test ob=new Test();
+   ob.meth(a,b);
+   System.out.println("value of a and b after is"+a+"  "+b);
+
+  }
+
+}
