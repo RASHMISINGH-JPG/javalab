@@ -1,0 +1,92 @@
+QUESTION:1. Create a class with a method that prints "This is parent class" and its subclass with another method that prints "This is child class". Now, create an object for each of the class and call
+            - method of parent class by object of parent class
+            - method of child class by object of child class
+            - method of parent class by object of child class
+     
+SOLUTION:
+
+class Parent
+{
+  void display()
+  {
+     System.out.println("This is a parent class");
+  }
+
+}
+
+class Child extends Parent
+{
+  void display2()
+  {
+     System.out.println("This is a child class");
+  }
+}
+
+class A
+{
+ public static void main(String args[])
+ {
+ 
+   Parent obj1=new Parent();
+   Child obj2=new Child();
+   obj1.display();
+   obj2.display2();
+   obj2.display();
+ }
+}
+
+
+QUESTION 2: Create a class named 'Member' having the following members:
+Data members
+1 - Name
+2 - Age
+3 - Phone number
+4 - Address
+5 - Salary
+It also has a method named 'printSalary' which prints the salary of the members.
+Two classes 'Employee' and 'Manager' inherits the 'Member' class. The 'Employee' and 'Manager' classes have data members 'specialization' and 'department' respectively. Now, assign name, age, phone number, address and salary to an employee and a manager by making an object of both of these classes and print the same.
+
+SOLUTION:
+
+class Member
+{
+  String name;
+  int age;
+  int num;
+  String address;
+  int salary;
+  void printSalary()
+  {
+    System.out.println("salary= "+salary);
+  }
+}
+
+class Employee extends Member
+{
+ String specialization;
+}
+
+class Manager extends Member
+{
+ String department;
+}
+
+class B
+{
+ public static void main(String args[])
+ {
+    Employee obj1=new Employee();
+	Manager obj2=new Manager();
+	obj1.name="RASHMI";
+	obj1.age=20;
+	obj1.num=999128;
+	obj1.salary=599999999;
+	obj2.name="ROHAN";
+	obj2.age=25;
+	obj2.num=933427;
+	obj2.salary=633999999;
+	System.out.println("employee name is "+obj1.name+" age is "+obj1.age+" num= "+obj1.num+" salary= "+obj1.salary);
+	System.out.println("Manager name is "+obj2.name+" age is "+obj2.age+" num= "+obj2.num+" salary= "+obj2.salary);
+	
+ }
+}
