@@ -1,0 +1,170 @@
+QUESTION-
+
+1. Create an abstract class 'Parent' with a method 'message'. It has two subclasses each having a method with the same name 'message' that prints "This is first subclass" and "This is second subclass" respectively. Call the methods 'message' by creating an object for each subclass.
+
+abstract class Parent
+{
+  abstract void message();
+}
+
+class Child1 extends Parent
+{
+  void message()
+  {
+    System.out.println("This is the first class");
+  }
+}
+
+class Child2 extends Parent
+{
+  void message()
+  {
+    System.out.println("This is the second class");
+  }
+}
+
+class D
+{
+ public static void main(String args[])
+ {
+   Parent obj1=new Child1();
+   Parent obj2=new Child2();
+   obj1.message();
+   obj2.message();
+ }
+}
+
+
+2. Create an abstract class 'Bank' with an abstract method 'getBalance'. $100, $150 and $200 are deposited in banks A, B and C respectively. 'BankA', 'BankB' and 'BankC' are subclasses of class 'Bank', each having a method named 'getBalance'. Call this method by creating an object of each of the three classes.
+
+->abstract class Bank
+{
+  abstract void getBalance();
+}
+
+class BankA extends Bank
+{
+  void getBalance()
+  {
+    System.out.println("$100");
+  }
+}
+
+class BankB extends Bank
+{
+  void getBalance()
+  {
+    System.out.println("$150");
+  }
+}
+
+class BankC extends Bank
+{
+  void getBalance()
+  {
+    System.out.println("$200");
+  }
+}
+
+class E
+{
+ public static void main(String args[])
+ {
+   BankA obj1=new BankA();
+   BankB obj2=new BankB();
+   BankC obj3=new BankC();
+   obj1.getBalance();
+   obj2.getBalance();
+    obj3.getBalance();
+ }
+}
+
+3. We have to calculate the percentage of marks obtained in three subjects (each out of 100) by student A and in four subjects (each out of 100) by student B. Create an abstract class 'Marks' with an abstract method 'getPercentage'. It is inherited by two other classes 'A' and 'B' each having a method with the same name which returns the percentage of the students. The constructor of student A takes the marks in three subjects as its parameters and the marks in four subjects as its parameters for student B. Create an object for eac of the two classes and print the percentage of marks for both the students.
+
+->bstract class Mark
+{
+ abstract double getPercentage();
+}
+class A extends Mark
+{
+ double result;
+ A( int a, int b, int c)
+ {
+  result=(a+b+c)/3;
+ }
+ double getPercentage()
+ {
+  return result;
+ }
+}
+class B extends Mark
+{
+ double result;
+ B(int a, int b, int c, int d)
+ {
+  result=(a+b+c+d)/4;
+ }
+ double getPercentage()
+ {
+  return result;
+ }
+}
+class Main
+{
+ public static void main(String args[])
+ {
+  //object for class A
+  Mark obj_1=new A(10,20,30);
+  System.out.println(obj_1.getPercentage());
+  //object for class B
+  Mark obj_2=new B(10,20,38,46);
+  System.out.println(obj_2.getPercentage());
+ }
+}
+
+
+4. We have to calculate the area of a rectangle, a square and a circle. Create an abstract class 'Shape' with three abstract methods namely 'RectangleArea' taking two parameters, 'SquareArea' and 'CircleArea' taking one parameter each. The parameters of 'RectangleArea' are its length and breadth, that of 'SquareArea' is its side and that of 'CircleArea' is its radius. Now create another class 'Area' containing all the three methods 'RectangleArea', 'SquareArea' and 'CircleArea' for printing the area of rectangle, square and circle respectively. Create an object of class 'Area' and call all the three methods.
+
+
+->abstract class Shape
+{
+  abstract void RectangleArea(double l,double b);
+  abstract void SquareArea(double s);
+  abstract void CircleArea(double r);
+}
+ 
+class Area extends Shape 
+{
+ void RectangleArea(double l,double b)
+  {
+   double result;
+   result=l*b;
+   System.out.println(" "+result);
+  }
+
+void SquareArea(double s)
+  {
+   double result;
+   result=s*s;
+   System.out.println(" "+result);
+  }
+ 
+ void CircleArea(double r)
+  {
+   double result;
+   result=3.14*r*r;
+   System.out.println(" "+result);
+  }
+ }
+ 
+ class G
+ {
+  public static void main(String args[])
+  {
+    Area obj1=new Area();
+	obj1.RectangleArea(5,9);
+	obj1.SquareArea(8);
+	obj1.CircleArea(4);
+  }
+ }
+ 
